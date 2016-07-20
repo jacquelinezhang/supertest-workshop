@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 clearRequireCache: false
 
             },
-            src: ['test/*.js']
+            src: ['test/*books.js']
         }
      }
 
