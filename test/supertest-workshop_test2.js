@@ -13,10 +13,7 @@ describe('GOOGLE SHEETS API',function(){
 
                 console.log(res);
                 console.log(err);
-
-
                 done(err);
-
             })
 
     })
