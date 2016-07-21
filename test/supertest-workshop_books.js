@@ -1,27 +1,36 @@
 var request = require('supertest')
 var request = request('https://www.googleapis.com/books/v1/volumes');
-var bookname = 'cucumber'
-var maxResults = 2
+
 
 // Test Google Books API
-describe('GOOGLE BOOKS API',function(){
+describe('GOOGLE BOOKS API - VOLUMES',function(){
+
+    var bookname = 'cucumber'
+    var maxResults = 2
+    var id;
 
     // Get book list that name includes "cucumber", return http status 200 - OK
     it('Get book list that name includes "cucumber", return http status 200 - OK', function(done){
 
         this.timeout(10000);
 
-        request.get('?q='+bookname+'&maxResults='+maxResults)
+        request.get('/')
+            .query({
+                q: bookname,
+                maxResults: maxResults
+            })
             .expect(200)
+            .expect(function(res) {
+
+                var length = res.body.items.length;
+                length = maxResults;
+                console.log(length);
+////              res.body.name = res.body.name.toUpperCase();
+            })
             .end(function(err,res){
 
-               console.log(res.body);
-
-                //How to print the info under items?
-//                console.log(res.body.items.id);
-//                console.log(res.body.items.selfLink);
-//                console.log(res.body.totalItems);
-//                console.log(res.body.items);
+               console.log(res.body.items[0].id);
+               id = res.body.items[0].id;
 
 //                console.log(err);
 
@@ -31,18 +40,49 @@ describe('GOOGLE BOOKS API',function(){
 
     })
 
+    // Get book list that name includes "cucumber", return http status 200 - OK
+    it('Get book list that name includes "cucumber", return http status 200 - OK', function(done){
+
+        this.timeout(10000);
+
+        request.get('/')
+            .query({
+                q: bookname,
+                maxResults: maxResults
+            })
+            .expect(200)
+            .expect(function(res) {
+                var length = res.body.items.length;
+                length = maxResults;
+                console.log(length);
+////              res.body.name = res.body.name.toUpperCase();
+            })
+            .end(function(err,res){
+
+               console.log(res.body.items[0].id);
+               id = res.body.items[0].id;
+
+//                console.log(err);
+
+                done(err);
+
+            })
+
+    })
+
+
 // Retrieve the id from last case, then use this id to get the book info
 
     it('Get the first book by id, return http status 200 - OK', function(done){
 
         this.timeout(10000);
 
-        request.get('/0dge3Xh6EjUC')
+        request.get('/' + id)
             .expect(200)
             .end(function(err,res){
 
 
-                console.log(res.body);
+//                console.log(res.body);
 //                console.log(err);
 
                 done(err);

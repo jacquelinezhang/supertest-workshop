@@ -1,77 +1,10 @@
 
 [0m[0m
 [0m  GOOGLE BOOKS API[0m
-{ kind: 'books#volumes',
-  totalItems: 557,
-  items: 
-   [ { kind: 'books#volume',
-       id: '0dge3Xh6EjUC',
-       etag: 'bsgu5aHnQkE',
-       selfLink: 'https://www.googleapis.com/books/v1/volumes/0dge3Xh6EjUC',
-       volumeInfo: [Object],
-       saleInfo: [Object],
-       accessInfo: [Object],
-       searchInfo: [Object] },
-     { kind: 'books#volume',
-       id: 'YuC_HK8b6_4C',
-       etag: 'oh2Vjhpg0VA',
-       selfLink: 'https://www.googleapis.com/books/v1/volumes/YuC_HK8b6_4C',
-       volumeInfo: [Object],
-       saleInfo: [Object],
-       accessInfo: [Object],
-       searchInfo: [Object] } ] }
-[2K[0G  [32m  ✓[0m[90m Get book list that name includes "cucumber", return http status 200 - OK[0m[31m (755ms)[0m
-{ kind: 'books#volume',
-  id: '0dge3Xh6EjUC',
-  etag: '0bK6B7WW6lI',
-  selfLink: 'https://www.googleapis.com/books/v1/volumes/0dge3Xh6EjUC',
-  volumeInfo: 
-   { title: 'Advances in Sea Cucumber Aquaculture and Management',
-     authors: 
-      [ 'C. Conand',
-        'Food and Agriculture Organization of the United Nations' ],
-     publisher: 'Food & Agriculture Org.',
-     publishedDate: '2004',
-     description: 'The utilization of sea cucumbers, including for human consumption, has been steadily growing over the years. Up-to-date information on the present status of world sea cucumber resources and utilization is presented with special focus on countries such as China, Ecuador, Indonesia, Japan, Malaysia and the Philippines that have been heavily engaged in the industry for decades. Information from other countries such as Cuba, Egypt, Madagascar and the United Republic of Tanzania, relative newcomers to the sector, is also provided, indicating to some extent the growing interest with regard to the exploitation of holothurians for the demanding Asian marketsDetails on the technical advances made in the artificial reproduction and farming of selected commercial species are presented. This document includes the recommendations formulated during the FAO Fisheries Department Workshop on Advances in Sea Cucumber Aquaculture and Management held in Dalian, China, in October 2003, along with the technical papers presented. The report will be useful to those international and regional development organizations and national governments who wish to prioritize their activities concerning sea cucumber conservation and exploitation.',
-     industryIdentifiers: [ [Object], [Object] ],
-     readingModes: { text: false, image: true },
-     pageCount: 425,
-     printedPageCount: 444,
-     dimensions: { height: '30.00 cm', width: '21.00 cm', thickness: '1.90 cm' },
-     printType: 'BOOK',
-     categories: 
-      [ 'Business & Economics / Reference',
-        'Nature / Environmental Conservation & Protection',
-        'Technology & Engineering / Agriculture / General',
-        'Technology & Engineering / Optics',
-        'Technology & Engineering / Fisheries & Aquaculture' ],
-     maturityRating: 'NOT_MATURE',
-     allowAnonLogging: false,
-     contentVersion: '0.0.1.0.preview.1',
-     imageLinks: 
-      { smallThumbnail: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71dZtb9GmcunoWpylP8Xi7NyO4iJYAVJ4N4KxjOxGJziAQPvEt-wjDo7fxC1UM64uPN0ZsxBuPljOUZkHP0Do71XqbNPbFfAidjz9yb80uo3URuPUX0U23I2CK4UludAgx_v1tK&source=gbs_api',
-        thumbnail: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73fih6_txCaohZFUypLVaZ7NkVtC5g_PxQUMp5fs8y5XkkEYzOn7Tm_ET0GV1ktLnHBTiKMd1G8-B27mPHtjyQfpJ-P-xlnzexS2IQzZG_e-PpwbfsUqT6tpa586d9YY-XO9emj&source=gbs_api',
-        small: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73Udc9dly2X8w-hstjhFbR1jsq96UGLbXa8tNQzq82TXy9F2lLnFac0TCQ3jrwCo8B2X5E6B6GYczW-OtFIjpcTQLktD1aZ-qKp7ZBK2YFxpBQLrhegUijexA6sMIzEjuzKYZCG&source=gbs_api',
-        medium: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73R8vkWm_LmrpfJC1wJITHLnUpI4EBh4pKCt_NXJwdcNPyjGOGtoO6MxF21KfsyIMZ50Adm6cvKmBysMqEMxSaIT4dGqaNRhlWJMvqj-84Efd4SPjUNQkkrVWZXmiIiCw0_XsX2&source=gbs_api',
-        large: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72DQPuLioKUelVotFs3wBGmmAcrL99tFvfFvfkTYQZzlSkJsVnwfZgx5fiG8bBBNigmbSqIeVlnjOLgf3dTooBR5g4LiHAtnv3ahFDof-5L8DfwvZG11qv2k2SHcqwwCOpZY31i&source=gbs_api',
-        extraLarge: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71J-RWXqOPuMOxTCgZJguF65R7DNFFTQ8O7S1ilYceuwvphLxR1mk4O458ou1wmwohGu7fk78om88owf4zat5sJjgBsylKMyz2D_1vFOMP80BCe9zwewhR3NksHEH8i1FBS1-5S&source=gbs_api' },
-     language: 'en',
-     previewLink: 'http://books.google.com.hk/books?id=0dge3Xh6EjUC&hl=&source=gbs_api',
-     infoLink: 'http://books.google.com.hk/books?id=0dge3Xh6EjUC&hl=&source=gbs_api',
-     canonicalVolumeLink: 'http://books.google.com.hk/books/about/Advances_in_Sea_Cucumber_Aquaculture_and.html?hl=&id=0dge3Xh6EjUC' },
-  saleInfo: { country: 'HK', saleability: 'NOT_FOR_SALE', isEbook: false },
-  accessInfo: 
-   { country: 'HK',
-     viewability: 'ALL_PAGES',
-     embeddable: true,
-     publicDomain: false,
-     textToSpeechPermission: 'ALLOWED',
-     epub: { isAvailable: false },
-     pdf: { isAvailable: false },
-     webReaderLink: 'http://books.google.com.hk/books/reader?id=0dge3Xh6EjUC&hl=&printsec=frontcover&output=reader&source=gbs_api',
-     accessViewStatus: 'SAMPLE',
-     quoteSharingAllowed: false } }
-[2K[0G  [32m  ✓[0m[90m Get the first book by id, return http status 200 - OK[0m[31m (456ms)[0m
+2
+0dge3Xh6EjUC
+[2K[0G  [32m  ✓[0m[90m Get book list that name includes "cucumber", return http status 200 - OK[0m[31m (608ms)[0m
+[2K[0G  [32m  ✓[0m[90m Get the first book by id, return http status 200 - OK[0m[31m (443ms)[0m
 
 
 [92m [0m[32m 2 passing[0m[90m (1s)[0m

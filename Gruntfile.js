@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             options: {
 
                 reporter: 'spec',
-                captureFile: 'results.txt',
+                captureFile: 'test-report.html',
                 quiet: false,
                 clearRequireCache: false
 
