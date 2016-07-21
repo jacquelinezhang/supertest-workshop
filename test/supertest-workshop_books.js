@@ -43,13 +43,6 @@ describe('GOOGLE BOOKS API',function(){
 
 
                 console.log(res.body);
-
-                //How to print the info under items?
-//                console.log(res.body.items.id);
-//                console.log(res.body.items.selfLink);
-//                console.log(res.body.totalItems);
-//                console.log(res.body.items);
-
 //                console.log(err);
 
                 done(err);

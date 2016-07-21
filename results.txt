@@ -1,10 +1,29 @@
 
 [0m[0m
 [0m  GOOGLE BOOKS API[0m
-[2K[0G  [32m  ✓[0m[90m Get book list that name includes "cucumber", return http status 200 - OK[0m[31m (958ms)[0m
+{ kind: 'books#volumes',
+  totalItems: 557,
+  items: 
+   [ { kind: 'books#volume',
+       id: '0dge3Xh6EjUC',
+       etag: 'bsgu5aHnQkE',
+       selfLink: 'https://www.googleapis.com/books/v1/volumes/0dge3Xh6EjUC',
+       volumeInfo: [Object],
+       saleInfo: [Object],
+       accessInfo: [Object],
+       searchInfo: [Object] },
+     { kind: 'books#volume',
+       id: 'YuC_HK8b6_4C',
+       etag: 'oh2Vjhpg0VA',
+       selfLink: 'https://www.googleapis.com/books/v1/volumes/YuC_HK8b6_4C',
+       volumeInfo: [Object],
+       saleInfo: [Object],
+       accessInfo: [Object],
+       searchInfo: [Object] } ] }
+[2K[0G  [32m  ✓[0m[90m Get book list that name includes "cucumber", return http status 200 - OK[0m[31m (755ms)[0m
 { kind: 'books#volume',
   id: '0dge3Xh6EjUC',
-  etag: 'ohlY8+ZIW0c',
+  etag: '0bK6B7WW6lI',
   selfLink: 'https://www.googleapis.com/books/v1/volumes/0dge3Xh6EjUC',
   volumeInfo: 
    { title: 'Advances in Sea Cucumber Aquaculture and Management',
@@ -30,12 +49,12 @@
      allowAnonLogging: false,
      contentVersion: '0.0.1.0.preview.1',
      imageLinks: 
-      { smallThumbnail: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71eDxxd4Xlf775w_bwTpOjhq2W-Yomn-Gz4gO4LlYhCy3eIslqHMu1mlqKJwdToLTpdHFUBys_kvFDKFaoSWvyyoV3cJMyz9wq5yHTddTrKKBAPxGYoE09-NJQNwCmcoplgDIc1&source=gbs_api',
-        thumbnail: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE7139DVaCk_-l8vPJQLKSV0xsqEYDJhvb6ePsH-irezGdQXh5F9T0J_EzLHtrissY7WkJA-NQMj2qrfTnXIVx-9TbgSlpTtNY__RJgU9b2U8_AKyHiyAsgIpt--DtnX8TP9sVNhR&source=gbs_api',
-        small: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70usylQAK4NS5KWJ2sytgA1AoYGPmGaEeqV0I_oopgIN9bpDhGzRLXq8vJ-_WS2jUkve0Ew7JCsGviMmOlgS6jdwx6VsB5swFqjrhuKh1MMNc_Np95G4UrF_Yyb5TExr5OPam4y&source=gbs_api',
-        medium: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE70_K6ifJfY7sTspIlk2cK6mKA7o6Nf3yL_4mQo9bTpSNpmzfWn-yGplR_62V6TVun7tIh4vTFOZ1l4kiuuNMBHG4xo2m8MpdOvTpzeQimlWiKqVUDc44A88GXDmXHgFHk6ikM6N&source=gbs_api',
-        large: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72JmIY734FEQytJyoaFR9g4V-kLFSE2P3k5hYTY0KtwFmVOySjXJNHogRwammV0SiwHWF--zxwCBDYzdSm1Okbm_Mt2GpsBIGTq9LQ-yNHPQB40WaghiWV-ZsbIz_iAl_77rJ2W&source=gbs_api',
-        extraLarge: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71T02blY2vtOKYjmt9w2c1KC4HfZU_HgJSurkK9a3TAS5v160BIxHSmwQ2SsoTrVC1SmO4BmFwoMKiLIbG-XHInlxz0WpK87o_meM13f7tfszAduNwHDIJouWeLXv4JcDPV_vrP&source=gbs_api' },
+      { smallThumbnail: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71dZtb9GmcunoWpylP8Xi7NyO4iJYAVJ4N4KxjOxGJziAQPvEt-wjDo7fxC1UM64uPN0ZsxBuPljOUZkHP0Do71XqbNPbFfAidjz9yb80uo3URuPUX0U23I2CK4UludAgx_v1tK&source=gbs_api',
+        thumbnail: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73fih6_txCaohZFUypLVaZ7NkVtC5g_PxQUMp5fs8y5XkkEYzOn7Tm_ET0GV1ktLnHBTiKMd1G8-B27mPHtjyQfpJ-P-xlnzexS2IQzZG_e-PpwbfsUqT6tpa586d9YY-XO9emj&source=gbs_api',
+        small: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73Udc9dly2X8w-hstjhFbR1jsq96UGLbXa8tNQzq82TXy9F2lLnFac0TCQ3jrwCo8B2X5E6B6GYczW-OtFIjpcTQLktD1aZ-qKp7ZBK2YFxpBQLrhegUijexA6sMIzEjuzKYZCG&source=gbs_api',
+        medium: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73R8vkWm_LmrpfJC1wJITHLnUpI4EBh4pKCt_NXJwdcNPyjGOGtoO6MxF21KfsyIMZ50Adm6cvKmBysMqEMxSaIT4dGqaNRhlWJMvqj-84Efd4SPjUNQkkrVWZXmiIiCw0_XsX2&source=gbs_api',
+        large: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72DQPuLioKUelVotFs3wBGmmAcrL99tFvfFvfkTYQZzlSkJsVnwfZgx5fiG8bBBNigmbSqIeVlnjOLgf3dTooBR5g4LiHAtnv3ahFDof-5L8DfwvZG11qv2k2SHcqwwCOpZY31i&source=gbs_api',
+        extraLarge: 'http://books.google.com.hk/books/content?id=0dge3Xh6EjUC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71J-RWXqOPuMOxTCgZJguF65R7DNFFTQ8O7S1ilYceuwvphLxR1mk4O458ou1wmwohGu7fk78om88owf4zat5sJjgBsylKMyz2D_1vFOMP80BCe9zwewhR3NksHEH8i1FBS1-5S&source=gbs_api' },
      language: 'en',
      previewLink: 'http://books.google.com.hk/books?id=0dge3Xh6EjUC&hl=&source=gbs_api',
      infoLink: 'http://books.google.com.hk/books?id=0dge3Xh6EjUC&hl=&source=gbs_api',
@@ -52,7 +71,7 @@
      webReaderLink: 'http://books.google.com.hk/books/reader?id=0dge3Xh6EjUC&hl=&printsec=frontcover&output=reader&source=gbs_api',
      accessViewStatus: 'SAMPLE',
      quoteSharingAllowed: false } }
-[2K[0G  [32m  ✓[0m[90m Get the first book by id, return http status 200 - OK[0m[31m (463ms)[0m
+[2K[0G  [32m  ✓[0m[90m Get the first book by id, return http status 200 - OK[0m[31m (456ms)[0m
 
 
 [92m [0m[32m 2 passing[0m[90m (1s)[0m
