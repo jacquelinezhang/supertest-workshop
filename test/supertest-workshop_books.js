@@ -1,4 +1,7 @@
-var request = require('supertest')('https://www.googleapis.com/books/v1/volumes');
+var config = require('../config/host_config');
+var url = config.host['books'];
+
+var request = require('supertest')(url+'/volumes');
 var chai = require('chai');
 var expect = require('chai').expect;
 
