@@ -1,7 +1,7 @@
 var config = require('../config/host_config');
 var url = config.host['books'];
 
-var request = require('supertest')(url+'/volumes');
+var request = require('supertest')(url + '/volumes');
 var chai = require('chai');
 var expect = require('chai').expect;
 

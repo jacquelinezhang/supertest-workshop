@@ -1,9 +1,12 @@
-var request = require('supertest')('https://sheets.googleapis.com/v4/spreadsheets');
+var config = require('../config/host_config');
+var url = config.host['sheets'];
+
+var request = require('supertest')(url + '/spreadsheets');
 var chai = require('chai');
 var expect = require('chai').expect;
 
 var spreadsheetId = '1gU8HQ72E7ECWqQYINSE2zhJlFiSpqMTVG3ShnzJQquE'
-var accessToken = 'Bearer ya29.CjArA84QBCPWi3hEOSmf7s5uiZj9cxL78Jk_3te3VUVl48mt3bWNXuBoPTyXOy-hqJ8'
+var accessToken = 'Bearer ya29.CjArA3hvfQ_1YJm7Z1B5796tdfPbruTpRP-p3RNAZTZoQgMOxPGeUGmCYvs9sz-77Ak'
 
 var sheetId;
 var sheetName = 'juewen';
