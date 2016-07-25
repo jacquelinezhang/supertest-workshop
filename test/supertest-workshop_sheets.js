@@ -3,7 +3,7 @@ var chai = require('chai');
 var expect = require('chai').expect;
 
 var spreadsheetId = '1gU8HQ72E7ECWqQYINSE2zhJlFiSpqMTVG3ShnzJQquE'
-var accessToken = 'Bearer ya29.CjAqA0vaA_0HE5UJeO9iBYRheTSFh9XHJI4_fGLQHsrbcSSSH-oAUN2KIfGFMsqs97g'
+var accessToken = 'Bearer ya29.CjArA84QBCPWi3hEOSmf7s5uiZj9cxL78Jk_3te3VUVl48mt3bWNXuBoPTyXOy-hqJ8'
 
 var sheetId;
 var sheetName = 'juewen';
