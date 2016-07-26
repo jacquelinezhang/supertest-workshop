@@ -1,36 +1,79 @@
 
 [0m[0m
 [0m  GOOGLE BOOKS API - VOLUMES[0m
-[2K[0G  [32m  ✓[0m[90m Get book list that name includes "test", return http status 200 - OK[0m[31m (837ms)[0m
-[2K[0G  [32m  ✓[0m[90m Get book list that name includes "cucumber", return http status 200 - OK[0m[31m (558ms)[0m
-[2K[0G  [32m  ✓[0m[90m Get the first book by id, return http status 200 - OK[0m[31m (398ms)[0m
+[2K[0G  [32m  ✓[0m[90m Get book list that name includes "test", return http status 200 - OK[0m[31m (1003ms)[0m
+[2K[0G  [32m  ✓[0m[90m Get book list that name includes "cucumber", return http status 200 - OK[0m[31m (674ms)[0m
+[2K[0G  [32m  ✓[0m[90m Get the first book by id, return http status 200 - OK[0m[31m (547ms)[0m
 
 [0m  GOOGLE SHEETS API[0m
-[2K[0G  [32m  ✓[0m[90m Add a new sheet[0m[31m (1444ms)[0m
-[2K[0G  [32m  ✓[0m[90m Write to multiple ranges[0m[31m (1327ms)[0m
-[2K[0G  [32m  ✓[0m[90m Write a single range[0m[31m (1535ms)[0m
-{ range: 'juewen!A1:D4',
-  majorDimension: 'ROWS',
-  values: 
-   [ [ 'Item', 'Cost', 'Stocked', 'Ship Date' ],
-     [ 'Wheel', '$20.50', '4', '3/1/2016' ],
-     [ 'Door', '$15', '2', '3/15/2016' ],
-     [ 'Engine', '$100', '1', '30/20/2016' ] ] }
------- requestBody-------
-{ range: 'juewen!A1:D4',
-  majorDimension: 'ROWS',
-  values: 
-   [ [ 'Item', 'Cost', 'Stocked', 'Ship Date' ],
-     [ 'Wheel', '$20.50', '4', '3/1/2016' ],
-     [ 'Door', '$15', '2', '3/15/2016' ],
-     [ 'Engine', '$100', '1', '30/20/2016' ] ] }
------end ------
-[2K[0G  [32m  ✓[0m[90m Read a single range[0m[31m (1348ms)[0m
-333637138
-{ spreadsheetId: '1gU8HQ72E7ECWqQYINSE2zhJlFiSpqMTVG3ShnzJQquE',
-  replies: [ {} ] }
-[2K[0G  [32m  ✓[0m[90m Delete a sheet[0m[31m (1724ms)[0m
+[2K[0G  [31m  1) Add a new sheet[0m
+[2K[0G  [31m  2) Write to multiple ranges[0m
+[2K[0G  [31m  3) Write a single range[0m
+[2K[0G  [31m  4) Read a single range[0m
+undefined
+{ error: 
+   { code: 401,
+     message: 'Request had invalid authentication credentials.',
+     status: 'UNAUTHENTICATED' } }
+[2K[0G  [31m  5) Delete a sheet[0m
 
 
-[92m [0m[32m 8 passing[0m[90m (9s)[0m
+[92m [0m[32m 3 passing[0m[90m (9s)[0m
+[31m  5 failing[0m
+
+[0m  1) GOOGLE SHEETS API Add a new sheet:
+[0m[31m     Uncaught TypeError: Cannot read property '0' of undefined[0m[90m
+      at Test.<anonymous> (test/supertest-workshop_sheets.js:64:39)
+      at Test.assert (node_modules/supertest/lib/test.js:156:6)
+      at assert (node_modules/supertest/lib/test.js:127:12)
+      at node_modules/supertest/lib/test.js:124:5
+      at Test.Request.callback (node_modules/superagent/lib/node/index.js:703:3)
+      at Stream.<anonymous> (node_modules/superagent/lib/node/index.js:922:12)
+      at Unzip.<anonymous> (node_modules/superagent/lib/node/utils.js:108:12)
+[0m
+[0m  2) GOOGLE SHEETS API Write to multiple ranges:
+[0m[31m     Error: expected 200 "OK", got 401 "Unauthorized"[0m[90m
+      at Test._assertStatus (node_modules/supertest/lib/test.js:232:12)
+      at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
+      at Test.assert (node_modules/supertest/lib/test.js:148:18)
+      at assert (node_modules/supertest/lib/test.js:127:12)
+      at node_modules/supertest/lib/test.js:124:5
+      at Test.Request.callback (node_modules/superagent/lib/node/index.js:703:3)
+      at Stream.<anonymous> (node_modules/superagent/lib/node/index.js:922:12)
+      at Unzip.<anonymous> (node_modules/superagent/lib/node/utils.js:108:12)
+[0m
+[0m  3) GOOGLE SHEETS API Write a single range:
+[0m[31m     Error: expected 200 "OK", got 401 "Unauthorized"[0m[90m
+      at Test._assertStatus (node_modules/supertest/lib/test.js:232:12)
+      at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
+      at Test.assert (node_modules/supertest/lib/test.js:148:18)
+      at assert (node_modules/supertest/lib/test.js:127:12)
+      at node_modules/supertest/lib/test.js:124:5
+      at Test.Request.callback (node_modules/superagent/lib/node/index.js:703:3)
+      at Stream.<anonymous> (node_modules/superagent/lib/node/index.js:922:12)
+      at Unzip.<anonymous> (node_modules/superagent/lib/node/utils.js:108:12)
+[0m
+[0m  4) GOOGLE SHEETS API Read a single range:
+[0m[31m     Error: expected 200 "OK", got 401 "Unauthorized"[0m[90m
+      at Test._assertStatus (node_modules/supertest/lib/test.js:232:12)
+      at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
+      at Test.assert (node_modules/supertest/lib/test.js:148:18)
+      at assert (node_modules/supertest/lib/test.js:127:12)
+      at node_modules/supertest/lib/test.js:124:5
+      at Test.Request.callback (node_modules/superagent/lib/node/index.js:703:3)
+      at Stream.<anonymous> (node_modules/superagent/lib/node/index.js:922:12)
+      at Unzip.<anonymous> (node_modules/superagent/lib/node/utils.js:108:12)
+[0m
+[0m  5) GOOGLE SHEETS API Delete a sheet:
+[0m[31m     Error: expected 200 "OK", got 401 "Unauthorized"[0m[90m
+      at Test._assertStatus (node_modules/supertest/lib/test.js:232:12)
+      at Test._assertFunction (node_modules/supertest/lib/test.js:247:11)
+      at Test.assert (node_modules/supertest/lib/test.js:148:18)
+      at assert (node_modules/supertest/lib/test.js:127:12)
+      at node_modules/supertest/lib/test.js:124:5
+      at Test.Request.callback (node_modules/superagent/lib/node/index.js:703:3)
+      at Stream.<anonymous> (node_modules/superagent/lib/node/index.js:922:12)
+      at Unzip.<anonymous> (node_modules/superagent/lib/node/utils.js:108:12)
+[0m
+
 
