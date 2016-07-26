@@ -6,7 +6,7 @@ var chai = require('chai');
 var expect = require('chai').expect;
 
 var spreadsheetId = '1gU8HQ72E7ECWqQYINSE2zhJlFiSpqMTVG3ShnzJQquE'
-var accessToken = 'Bearer ya29.CjArA3hvfQ_1YJm7Z1B5796tdfPbruTpRP-p3RNAZTZoQgMOxPGeUGmCYvs9sz-77Ak'
+var accessToken = 'Bearer ya29.CjAsA4wPjOjKIuDbzyC99ALoR70RqSSXoq7M84nlQISmXey9txRmXsUH_xCMEukH-E8'
 
 var sheetId;
 var sheetName = 'juewen';
@@ -168,13 +168,6 @@ describe('GOOGLE SHEETS API',function(){
 
             .expect(function(res){
 
-                console.log(res.body);
-
-                console.log('------ requestBody-------');
-
-                console.log(requestBody);
-
-                console.log('-----end ------');
 
                 expect(res.body).to.deep.equal(requestBody);
 
@@ -195,7 +188,7 @@ describe('GOOGLE SHEETS API',function(){
     it('Delete a sheet', function(done){
 
         this.timeout(20000)
-        console.log(sheetId)
+//        console.log(sheetId)
 
         var requestBody = {
                             "requests": [
@@ -224,13 +217,11 @@ describe('GOOGLE SHEETS API',function(){
 
         .end(function(err,res){
 
-            console.log(res.body);
+//            console.log(res.body);
             done(err);
 
         })
 
     })
-
-
 
 })
