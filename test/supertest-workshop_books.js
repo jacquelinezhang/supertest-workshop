@@ -5,32 +5,17 @@ var request = require('supertest')(url + '/volumes');
 var chai = require('chai');
 var expect = require('chai').expect;
 
+var id;
+
 
 // Test Google Books API
 describe('GOOGLE BOOKS API - VOLUMES',function(){
 
-    var id;
-
-    // Get book list that name includes "test", return http status 200 - OK
-    it.only('Get book list that name includes "test", return http status 200 - OK', function(done){
-        request.get('?q=test')
-
+    it.skip('Search books with a mandatory parameter(q="test") - Return 200', function(done){
+        request
+            .get('/?q=test')
+            //Check http status is 200
             .expect(200)
-
-            .end(function(err,res){
-
-//                console.log(res);
-                done(err);
-
-            })
-
-    })
-
-    it('Get book list that name includes "test", return http status 200 - OK', function(done){
-        request.get('/?q=test')
-
-            .expect(200)
-
             .end(function(err,res){
 
     //                console.log(res);
@@ -41,11 +26,9 @@ describe('GOOGLE BOOKS API - VOLUMES',function(){
         })
 
 
+    it('Search books with two parameters(q="cucumber"&maxResult=2) - Return 200 OK', function(done){
 
-    // Get book list that name includes "cucumber", return http status 200 - OK
-    it('Get book list that name includes "cucumber" and maxResult=, return http status 200 - OK', function(done){
-
-        var bookname = 'cucumber'
+        var q = 'cucumber'
         var maxResults = 2
 
         this.timeout(10000);
@@ -53,22 +36,25 @@ describe('GOOGLE BOOKS API - VOLUMES',function(){
         request.get('/')
 
             .query({
-                q: bookname,
+                q: q,
                 maxResults: maxResults
             })
 
             .expect(200)
 
             .expect(function(res) {
+                //Get item id for the first book
                 id = res.body.items[0].id;
                 var selfLinkLength = res.body.items[0].selfLink.split('/').length;
                 var selfLinkId = res.body.items[0].selfLink.split('/')[selfLinkLength - 1];
 
-                expect(res.body.items[0].volumeInfo.title.toLowerCase()).to.contain(bookname);
+                //Check book title contains the first parameter - cucumber
+                expect(res.body.items[0].volumeInfo.title.toLowerCase()).to.contain(q);
+                //Check total itmes <= the second parameter - 2
                 expect(res.body.items.length).be.at.most(maxResults);
-
+                //Check item id is the same as the id in selfLink
                 expect(selfLinkId).to.equal(id);
-                expect(res.body).to.have.any.keys('kind', 'totalItems', 'items');
+                //Check mandatory keys, e.g. kind, totalItems, items....
                 expect(res.body).to.include.keys('kind', 'totalItems', 'items');
 
             })
@@ -81,9 +67,7 @@ describe('GOOGLE BOOKS API - VOLUMES',function(){
 
     })
 
-
-    // Retrieve the id from last case, then use this id to get the book info
-    it('Get the first book by id, return http status 200 - OK', function(done){
+    it('Retrieves a Volume resource based on ID that is from last case - Return 200', function(done){
 
         this.timeout(10000);
 
@@ -92,14 +76,12 @@ describe('GOOGLE BOOKS API - VOLUMES',function(){
 
             .expect(function(res){
 
+                // Check the id in response is the same as parameter
                 expect(res.body.id).to.equal(id)
 
             })
 
             .end(function(err,res){
-
-//                console.log(res.body);
-//                console.log(err);
 
                 done(err);
 

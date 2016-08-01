@@ -6,27 +6,27 @@ var chai = require('chai');
 var expect = require('chai').expect;
 
 var spreadsheetId = '1gU8HQ72E7ECWqQYINSE2zhJlFiSpqMTVG3ShnzJQquE'
-var accessToken = 'Bearer ya29.CjAsA4wPjOjKIuDbzyC99ALoR70RqSSXoq7M84nlQISmXey9txRmXsUH_xCMEukH-E8'
+var accessToken = 'Bearer ya29.CjAyA3d9_ns2M1Mm9sl4_y8qIV_wgj5kU6tdBcyTj1r69aX4QBcADNfN42HhnkoGoSw'
 
 var sheetId;
 var sheetName = 'juewen';
 
+var range = sheetName +'!A1:D4'
 
-    var range = sheetName +'!A1:D4'
-    var requestBody = {
-                        "range": range,
-                        "majorDimension": "ROWS",
-                        "values": [
-                          ["Item", "Cost", "Stocked", "Ship Date"],
-                          ["Wheel", "$20.50", "4", "3/1/2016"],
-                          ["Door", "$15", "2", "3/15/2016"],
-                          ["Engine", "$100", "1", "30/20/2016"]
-                        ]
-                      }
+var requestBody = {
+                    "range": "Sheet1!A1:D5",
+                    "majorDimension": "ROWS",
+                    "values": [
+                      ["Item", "Cost", "Stocked", "Ship Date"],
+                      ["Wheel", "$20.50", "4", "3/1/2016"],
+                      ["Door", "$15", "2", "3/15/2016"],
+                      ["Engine", "$100", "1", "30/20/2016"]
+                    ]
+                  }
 
 describe('GOOGLE SHEETS API',function(){
 
-    it('Add a new sheet', function(done){
+    it('Add a new sheet - Return 200', function(done){
 
         this.timeout(10000);
 
@@ -53,7 +53,10 @@ describe('GOOGLE SHEETS API',function(){
 
         .expect(function(res){
 
+            //spreadsheetId in response is the same as the one in request URL
             expect(res.body.spreadsheetId).to.equal(spreadsheetId);
+
+            //sheet name in response is the same as the one in request body
             expect(res.body.replies[0].addSheet.properties.title).to.equal(sheetName);
 
 
@@ -61,6 +64,7 @@ describe('GOOGLE SHEETS API',function(){
 
         .end(function(err, res){
 
+            //Retrieve sheet id for next scenarios
             sheetId = res.body.replies[0].addSheet.properties.sheetId;
             done(err);
 
@@ -69,7 +73,7 @@ describe('GOOGLE SHEETS API',function(){
     })
 
 
-    it('Write to multiple ranges', function(done){
+    it('Write to multiple ranges - Return 200', function(done){
         this.timeout(10000);
 
         var requestBody = {
@@ -125,7 +129,7 @@ describe('GOOGLE SHEETS API',function(){
 
     })
 
-    it('Write a single range', function(done){
+    it('Write a single range - Return 200', function(done){
 
         this.timeout(10000);
 
@@ -141,7 +145,10 @@ describe('GOOGLE SHEETS API',function(){
 
             .expect(function(res){
 
+                //spreadsheetId in response is the same as the one in request URL
                 expect(res.body.spreadsheetId).to.equal(spreadsheetId)
+
+                //range in response is the same the one in request body
                 expect(res.body.updatedRange).to.equal(range)
 
 
@@ -185,7 +192,7 @@ describe('GOOGLE SHEETS API',function(){
 
 
 
-    it('Delete a sheet', function(done){
+    it('Delete a sheet - Return 200', function(done){
 
         this.timeout(20000)
 //        console.log(sheetId)
